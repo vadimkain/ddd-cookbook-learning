@@ -1,4 +1,4 @@
-package com.example.domain.maybe_entity_or_command;
+package com.example.domain.idontknow;
 
 public record SubscriberDataUpdateResponse(
         String subscriberId,

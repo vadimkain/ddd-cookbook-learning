@@ -1,6 +1,12 @@
 package com.example.domain.common;
 
+import reactor.util.function.Tuple3;
+import reactor.util.function.Tuple4;
+import reactor.util.function.Tuples;
+
 import java.io.Serializable;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 @SuppressWarnings({"unchecked", "RedundantSuppression"})
 public final class Result<T> implements Serializable {
@@ -16,6 +22,10 @@ public final class Result<T> implements Serializable {
 
     public boolean isFailure() {
         return value instanceof Failure;
+    }
+
+    public T getValue() {
+        return (T) value;
     }
 
     public T getOrNull() {
@@ -107,7 +117,7 @@ public final class Result<T> implements Serializable {
         }
     }
 
-    public <R> R fold(java.util.function.Function<? super T, ? extends R> onSuccess, java.util.function.Function<? super Throwable, ? extends R> onFailure) {
+    public <R> R fold(Function<? super T, ? extends R> onSuccess, Function<? super Throwable, ? extends R> onFailure) {
         if (isSuccess()) {
             return onSuccess.apply((T) value);
         } else {
@@ -168,4 +178,36 @@ public final class Result<T> implements Serializable {
         }
         return this;
     }
+
+    public static <A extends Object, B extends Object, C extends Object, D extends Object> Result<Tuple4<A, B, C, D>> zip(Result<A> a, Result<B> b, Result<C> c, Result<D> d) throws Throwable {
+        if (Stream.of(a, b, c, d).noneMatch(it -> it.isFailure()))
+            return Result.success(Tuples.of(a.getOrThrow(), b.getOrThrow(), c.getOrThrow(), d.getOrThrow()));
+        else
+            return Result.failure(Stream.of(a, b, c, d).filter(it -> it.isFailure()).findFirst().get().exceptionOrNull());
+    }
+
+    public static <A extends Object, B extends Object, C extends Object> Result<Tuple3<A, B, C>> zip(Result<A> a, Result<B> b, Result<C> c) throws Throwable {
+        // Проверяем, что ни один из переданных Result не является неуспешным
+        if (Stream.of(a, b, c).noneMatch(it -> it.isFailure())) {
+            // Если все Result успешны, создаем кортеж из их значений и возвращаем успешный Result
+            return Result.success(Tuples.of(a.getOrThrow(), b.getOrThrow(), c.getOrThrow()));
+        } else {
+            // Если хотя бы один Result неуспешен, находим первый неуспешный Result и возвращаем его исключение
+            return Result.failure(Stream.of(a, b, c)
+                    .filter(it -> it.isFailure()) // Фильтруем неуспешные результаты
+                    .findFirst() // Находим первый неуспешный результат
+                    .get() // Получаем этот результат
+                    .exceptionOrNull() // Получаем исключение из этого результата
+            );
+        }
+    }
+
+    public <R> Result<R> flatMap(Function<? super T, ? extends Result<? extends R>> transform) {
+        if (this.isSuccess()) {
+            return (Result<R>) transform.apply(this.getOrNull());
+        } else {
+            return Result.failure(this.exceptionOrNull());
+        }
+    }
+
 }

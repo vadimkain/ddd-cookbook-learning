@@ -1,7 +1,10 @@
 package com.example.controller;
 
+import com.example.domain.common.Result;
 import com.example.domain.dto.DataUpdateRequestDto;
 import com.example.domain.dto.SubscriberDataUpdateResponseDto;
+import com.example.domain.events.UnvalidatedDataUpdateRequest;
+import com.example.domain.idontknow.SubscriberDataUpdateResponse;
 import com.example.domain.service.SubscriberDataUpdateService;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +30,30 @@ public class SubscriberDataUpdateController {
 //    /subscriber-data-updates - антипаттерн RESTful
     @PutMapping("/subscriber-data-updates")
     public Mono<RestResponse<SubscriberDataUpdateResponseDto>> subscriberDataUpdate(@RequestBody RestRequest<DataUpdateRequestDto> subscriberDataUpdate) {
-        return _subscriberDataUpdate.subscriberUpdate()
+        return _subscriberDataUpdate
+                .subscriberUpdate(new UnvalidatedDataUpdateRequest(subscriberDataUpdate.data().dataUpdateId()))
+                .map(this::mapToDto)
+                .map(this::wrapToRestResponse);
+    }
+
+    private Result<SubscriberDataUpdateResponseDto> mapToDto(Result<SubscriberDataUpdateResponse> subscriberDataUpdateResponseResult) {
+        return subscriberDataUpdateResponseResult.map(SubscriberDataUpdateResponseDto::from);
+    }
+
+    private RestResponse<SubscriberDataUpdateResponseDto> wrapToRestResponse(Result<SubscriberDataUpdateResponseDto> result) {
+        if (result.isSuccess()) {
+            try {
+                return RestResponse.success(result.getOrThrow());
+            } catch (Throwable e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        return RestResponse.fail(
+                new RestError(
+                        result.exceptionOrNull().getMessage(),
+                        "spell-error-code"
+                )
+        );
     }
 }
