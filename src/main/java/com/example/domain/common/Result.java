@@ -10,9 +10,9 @@ import java.util.stream.Stream;
 
 @SuppressWarnings({"unchecked", "RedundantSuppression"})
 public final class Result<T> implements Serializable {
-    private final Object value;
+    private final T value;
 
-    private Result(Object value) {
+    private Result(T value) {
         this.value = value;
     }
 
@@ -83,10 +83,10 @@ public final class Result<T> implements Serializable {
     }
 
     public static <T> Result<T> failure(Throwable exception) {
-        return new Result<>(createFailure(exception));
+        return (Result<T>) new Result<>(createFailure(exception));
     }
 
-    private static Object createFailure(Throwable exception) {
+    private static Failure createFailure(Throwable exception) {
         return new Failure(exception);
     }
 
