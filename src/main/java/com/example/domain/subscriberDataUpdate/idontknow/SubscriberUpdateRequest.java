@@ -1,4 +1,6 @@
-package com.example.domain.idontknow;
+package com.example.domain.subscriberDataUpdate.idontknow;
+
+import com.example.domain.subscriberDataUpdate.aggregate.SubscriberDataUpdate;
 
 public class SubscriberUpdateRequest {
     private final String subscriberId;

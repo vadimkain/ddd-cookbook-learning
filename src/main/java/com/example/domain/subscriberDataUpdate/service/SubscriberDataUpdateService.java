@@ -1,13 +1,13 @@
-package com.example.domain.service;
+package com.example.domain.subscriberDataUpdate.service;
 
 import com.example.domain.*;
-import com.example.domain.common.Result;
-import com.example.domain.idontknow.DataUpdate;
-import com.example.domain.idontknow.SubscriberDataUpdate;
-import com.example.domain.idontknow.SubscriberDataUpdateResponse;
-import com.example.domain.events.UnvalidatedDataUpdateRequest;
-import com.example.domain.events.ValidatedDataUpdateRequest;
-import com.example.domain.idontknow.SubscriberUpdateRequest;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.idontknow.DataUpdate;
+import com.example.domain.subscriberDataUpdate.aggregate.SubscriberDataUpdate;
+import com.example.domain.subscriberDataUpdate.idontknow.SubscriberDataUpdateResponse;
+import com.example.domain.subscriberDataUpdate.events.UnvalidatedDataUpdateRequest;
+import com.example.domain.subscriberDataUpdate.events.ValidatedDataUpdateRequest;
+import com.example.domain.subscriberDataUpdate.idontknow.SubscriberUpdateRequest;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 

@@ -1,9 +1,9 @@
 package com.example.domain;
 
 import com.example.controller.RestResponse;
-import com.example.domain.common.Result;
-import com.example.domain.dto.DataUpdateDto;
-import com.example.domain.dto.SubscriberDto;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.dto.DataUpdateDto;
+import com.example.domain.subscriberDataUpdate.dto.SubscriberDto;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

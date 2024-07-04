@@ -1,17 +1,20 @@
-package com.example.domain.idontknow;
+package com.example.domain.subscriberDataUpdate.aggregate;
 
-import com.example.domain.common.Result;
-import com.example.domain.valueobject.DataUpdateId;
-import com.example.domain.valueobject.SubscriberId;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.idontknow.DataUpdate;
+import com.example.domain.subscriberDataUpdate.idontknow.Subscriber;
+import com.example.domain.subscriberDataUpdate.idontknow.SubscriberUpdateRequest;
+import com.example.domain.subscriberDataUpdate.valueobject.DataUpdateId;
+import com.example.domain.subscriberDataUpdate.valueobject.SubscriberId;
 
-// maybe aggregate
+//AggregateRoot
 public class SubscriberDataUpdate {
     private final DataUpdate dataUpdate;
     private final Subscriber subscriber;
     private final SubscriberId subscriberId;
     private final DataUpdateId dataUpdateId;
 
-    public SubscriberDataUpdate(DataUpdate dataUpdate, Subscriber subscriber) {
+    private SubscriberDataUpdate(DataUpdate dataUpdate, Subscriber subscriber) {
         this.dataUpdate = dataUpdate;
         this.subscriber = subscriber;
         this.subscriberId = subscriber.subscriberId();

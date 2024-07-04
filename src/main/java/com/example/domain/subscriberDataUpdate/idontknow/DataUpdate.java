@@ -1,11 +1,11 @@
-package com.example.domain.idontknow;
+package com.example.domain.subscriberDataUpdate.idontknow;
 
-import com.example.domain.common.Result;
-import com.example.domain.dto.DataUpdateDto;
-import com.example.domain.valueobject.DataUpdateId;
-import com.example.domain.valueobject.MobileRegionId;
-import com.example.domain.valueobject.Msisdn;
-import com.example.domain.valueobject.SubscriberId;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.dto.DataUpdateDto;
+import com.example.domain.subscriberDataUpdate.valueobject.MobileRegionId;
+import com.example.domain.subscriberDataUpdate.valueobject.Msisdn;
+import com.example.domain.subscriberDataUpdate.valueobject.DataUpdateId;
+import com.example.domain.subscriberDataUpdate.valueobject.SubscriberId;
 import reactor.util.function.Tuple4;
 
 public record DataUpdate(

@@ -1,4 +1,4 @@
-package com.example.domain.events;
+package com.example.domain.subscriberDataUpdate.events;
 
 public record UnvalidatedDataUpdateRequest(String dataUpdateId) {
 }

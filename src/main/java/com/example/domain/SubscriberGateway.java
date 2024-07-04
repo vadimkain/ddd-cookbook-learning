@@ -1,13 +1,13 @@
 package com.example.domain;
 
 import com.example.controller.RestResponse;
-import com.example.domain.common.Result;
-import com.example.domain.dto.DataUpdateDto;
-import com.example.domain.dto.SubscriberDto;
-import com.example.domain.idontknow.DataUpdate;
-import com.example.domain.events.ValidatedDataUpdateRequest;
-import com.example.domain.idontknow.Subscriber;
-import com.example.domain.valueobject.SubscriberId;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.dto.DataUpdateDto;
+import com.example.domain.subscriberDataUpdate.dto.SubscriberDto;
+import com.example.domain.subscriberDataUpdate.idontknow.DataUpdate;
+import com.example.domain.subscriberDataUpdate.events.ValidatedDataUpdateRequest;
+import com.example.domain.subscriberDataUpdate.idontknow.Subscriber;
+import com.example.domain.subscriberDataUpdate.valueobject.SubscriberId;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 

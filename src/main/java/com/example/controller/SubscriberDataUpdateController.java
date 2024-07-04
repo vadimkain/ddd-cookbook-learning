@@ -1,11 +1,11 @@
 package com.example.controller;
 
-import com.example.domain.common.Result;
-import com.example.domain.dto.DataUpdateRequestDto;
-import com.example.domain.dto.SubscriberDataUpdateResponseDto;
-import com.example.domain.events.UnvalidatedDataUpdateRequest;
-import com.example.domain.idontknow.SubscriberDataUpdateResponse;
-import com.example.domain.service.SubscriberDataUpdateService;
+import com.example.domain.subscriberDataUpdate.common.Result;
+import com.example.domain.subscriberDataUpdate.dto.DataUpdateRequestDto;
+import com.example.domain.subscriberDataUpdate.dto.SubscriberDataUpdateResponseDto;
+import com.example.domain.subscriberDataUpdate.events.UnvalidatedDataUpdateRequest;
+import com.example.domain.subscriberDataUpdate.idontknow.SubscriberDataUpdateResponse;
+import com.example.domain.subscriberDataUpdate.service.SubscriberDataUpdateService;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

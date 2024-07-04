@@ -1,4 +1,4 @@
-package com.example.domain.idontknow;
+package com.example.domain.subscriberDataUpdate.idontknow;
 
 public record SubscriberDataUpdateResponse(
         String subscriberId,

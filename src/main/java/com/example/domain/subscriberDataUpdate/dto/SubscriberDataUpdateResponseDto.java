@@ -1,6 +1,6 @@
-package com.example.domain.dto;
+package com.example.domain.subscriberDataUpdate.dto;
 
-import com.example.domain.idontknow.SubscriberDataUpdateResponse;
+import com.example.domain.subscriberDataUpdate.idontknow.SubscriberDataUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class SubscriberDataUpdateResponseDto {

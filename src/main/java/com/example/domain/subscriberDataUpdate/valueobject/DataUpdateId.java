@@ -1,6 +1,6 @@
-package com.example.domain.valueobject;
+package com.example.domain.subscriberDataUpdate.valueobject;
 
-import com.example.domain.common.Result;
+import com.example.domain.subscriberDataUpdate.common.Result;
 
 public class DataUpdateId implements ValueObject<String> {
     private final String value;

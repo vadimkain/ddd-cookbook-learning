@@ -1,4 +1,4 @@
-package com.example.domain.common;
+package com.example.domain.subscriberDataUpdate.common;
 
 import reactor.util.function.Tuple3;
 import reactor.util.function.Tuple4;
