@@ -6,7 +6,7 @@ import com.example.domain.subscriberDataUpdate.dto.DataUpdateDto;
 import com.example.domain.subscriberDataUpdate.dto.SubscriberDto;
 import com.example.domain.subscriberDataUpdate.idontknow.DataUpdate;
 import com.example.domain.subscriberDataUpdate.events.ValidatedDataUpdateRequest;
-import com.example.domain.subscriberDataUpdate.idontknow.Subscriber;
+import com.example.domain.subscriberDataUpdate.model.Subscriber;
 import com.example.domain.subscriberDataUpdate.valueobject.SubscriberId;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;

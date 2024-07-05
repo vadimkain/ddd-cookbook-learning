@@ -2,7 +2,7 @@ package com.example.domain.subscriberDataUpdate.aggregate;
 
 import com.example.domain.subscriberDataUpdate.common.Result;
 import com.example.domain.subscriberDataUpdate.idontknow.DataUpdate;
-import com.example.domain.subscriberDataUpdate.idontknow.Subscriber;
+import com.example.domain.subscriberDataUpdate.model.Subscriber;
 import com.example.domain.subscriberDataUpdate.idontknow.SubscriberUpdateRequest;
 import com.example.domain.subscriberDataUpdate.valueobject.DataUpdateId;
 import com.example.domain.subscriberDataUpdate.valueobject.SubscriberId;

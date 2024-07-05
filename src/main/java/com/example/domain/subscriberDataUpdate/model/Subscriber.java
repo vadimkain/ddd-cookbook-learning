@@ -1,4 +1,4 @@
-package com.example.domain.subscriberDataUpdate.idontknow;
+package com.example.domain.subscriberDataUpdate.model;
 
 import com.example.domain.subscriberDataUpdate.common.Result;
 import com.example.domain.subscriberDataUpdate.dto.SubscriberDto;

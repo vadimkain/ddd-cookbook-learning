@@ -6,27 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ed73d216-83ce-4341-a07a-5197808229db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/SubscriberDataUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/SubscriberDataUpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/SubscriberGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/SubscriberGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/SubscriberRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/SubscriberRestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/common/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/dto/DataUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/dto/DataUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/dto/DataUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/dto/DataUpdateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/dto/SubscriberDataUpdateResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/dto/SubscriberDataUpdateResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/dto/SubscriberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/dto/SubscriberDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/events/UnvalidatedDataUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/events/UnvalidatedDataUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/events/ValidatedDataUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/events/ValidatedDataUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/idontknow/DataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/idontknow/DataUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/idontknow/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/idontknow/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/idontknow/SubscriberDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/aggregate/SubscriberDataUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/idontknow/SubscriberDataUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/idontknow/SubscriberDataUpdateResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/idontknow/SubscriberUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/idontknow/SubscriberUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/service/SubscriberDataUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/service/SubscriberDataUpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/valueobject/DataUpdateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/valueobject/DataUpdateId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/valueobject/MobileRegionId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/valueobject/MobileRegionId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/valueobject/Msisdn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/valueobject/Msisdn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/valueobject/SubscriberId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/valueobject/SubscriberId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/valueobject/ValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/valueobject/ValueObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/aggregate/SubscriberDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/aggregate/SubscriberDataUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/idontknow/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/subscriberDataUpdate/model/Subscriber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +83,6 @@
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
